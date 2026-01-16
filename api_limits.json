@@ -1,0 +1,156 @@
+{
+  "exchanges": [
+    {
+      "name": "PancakeSwap",
+      "api_public": true,
+      "requires_auth": false,
+      "rate_limits": {
+        "subgraph": "The Graph free tier: ~1000 requests/hour per IP, can be throttled",
+        "rest": "No official rate limit documented, but recommended: ~10-20 requests/second",
+        "notes": "Uses The Graph Subgraph API (free tier available). REST API may be deprecated."
+      }
+    },
+    {
+      "name": "Uniswap",
+      "api_public": true,
+      "requires_auth": false,
+      "rate_limits": {
+        "subgraph": "The Graph free tier: ~1000 requests/hour per IP",
+        "routing_api": "Free tier: 2 requests/second, 50 requests/minute",
+        "notes": "Subgraph API is free. Routing API has free tier with limits, paid plans available."
+      }
+    },
+    {
+      "name": "Raydium AMM",
+      "api_public": true,
+      "requires_auth": false,
+      "rate_limits": {
+        "rest": "No official rate limit documented, recommended: ~10 requests/second",
+        "notes": "Public REST API available. Check official docs for latest limits."
+      }
+    },
+    {
+      "name": "Fluid",
+      "api_public": true,
+      "requires_auth": false,
+      "rate_limits": {
+        "rest": "Rate limits not documented, recommended: ~5-10 requests/second",
+        "notes": "API endpoint may need verification. Check official documentation."
+      }
+    },
+    {
+      "name": "Aerodrome",
+      "api_public": true,
+      "requires_auth": false,
+      "rate_limits": {
+        "subgraph": "The Graph free tier: ~1000 requests/hour per IP",
+        "notes": "Uses The Graph Subgraph API (free tier available)."
+      }
+    },
+    {
+      "name": "Meteora",
+      "api_public": true,
+      "requires_auth": false,
+      "rate_limits": {
+        "rest": "Rate limits not documented, recommended: ~10 requests/second",
+        "notes": "Public API available. Check official docs for latest limits."
+      }
+    },
+    {
+      "name": "Momentum",
+      "api_public": true,
+      "requires_auth": false,
+      "rate_limits": {
+        "rest": "Rate limits not documented, recommended: ~5-10 requests/second",
+        "notes": "API endpoint may need verification. Check official documentation."
+      }
+    },
+    {
+      "name": "Pump Swap",
+      "api_public": true,
+      "requires_auth": false,
+      "rate_limits": {
+        "rest": "Rate limits not documented, recommended: ~5-10 requests/second",
+        "notes": "API endpoint may need verification. Check official documentation."
+      }
+    },
+    {
+      "name": "SUN",
+      "api_public": true,
+      "requires_auth": false,
+      "rate_limits": {
+        "rest": "Rate limits not documented, recommended: ~5-10 requests/second",
+        "notes": "API endpoint may need verification. Check official documentation."
+      }
+    },
+    {
+      "name": "1inch.io",
+      "api_public": true,
+      "requires_auth": false,
+      "rate_limits": {
+        "free_tier": "300 requests/minute per IP",
+        "paid_tiers": "Higher limits available with API key",
+        "notes": "Free tier available without API key. Paid plans offer higher rate limits."
+      }
+    },
+    {
+      "name": "Camelot",
+      "api_public": true,
+      "requires_auth": false,
+      "rate_limits": {
+        "subgraph": "The Graph free tier: ~1000 requests/hour per IP",
+        "notes": "Uses The Graph Subgraph API (free tier available)."
+      }
+    },
+    {
+      "name": "QuickSwap",
+      "api_public": true,
+      "requires_auth": false,
+      "rate_limits": {
+        "subgraph": "The Graph free tier: ~1000 requests/hour per IP",
+        "notes": "Uses The Graph Subgraph API (free tier available)."
+      }
+    },
+    {
+      "name": "Balancer",
+      "api_public": true,
+      "requires_auth": false,
+      "rate_limits": {
+        "graphql": "No official rate limit documented, recommended: ~10-20 requests/second",
+        "notes": "Public GraphQL API available. Check official docs for latest limits."
+      }
+    },
+    {
+      "name": "Trader Joe",
+      "api_public": true,
+      "requires_auth": false,
+      "rate_limits": {
+        "rest": "Rate limits not documented, recommended: ~10 requests/second",
+        "notes": "Public API available. Check official docs for latest limits."
+      }
+    },
+    {
+      "name": "Pendle Finance",
+      "api_public": true,
+      "requires_auth": false,
+      "rate_limits": {
+        "rest": "Rate limits not documented, recommended: ~5-10 requests/second",
+        "notes": "API endpoint may need verification. Check official documentation."
+      }
+    },
+    {
+      "name": "Sushi",
+      "api_public": true,
+      "requires_auth": false,
+      "rate_limits": {
+        "subgraph": "The Graph free tier: ~1000 requests/hour per IP",
+        "notes": "Uses The Graph Subgraph API (free tier available)."
+      }
+    }
+  ],
+  "general_notes": {
+    "the_graph_subgraph": "Most DEX using The Graph Subgraph API have similar limits: ~1000 requests/hour per IP on free tier. Can be throttled if exceeded.",
+    "recommendations": "For production use, consider: 1) Using API keys where available for higher limits, 2) Implementing request throttling, 3) Caching responses, 4) Using WebSocket where available for real-time data",
+    "warning": "Rate limits may change. Always check official documentation before production deployment."
+  }
+}

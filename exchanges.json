@@ -1,20 +1,102 @@
 {
   "exchanges": [
-    "PancakeSwap",
-    "Uniswap",
-    "Raydium AMM",
-    "Fluid",
-    "Aerodrome",
-    "Meteora",
-    "Momentum",
-    "Pump Swap",
-    "SUN",
-    "1inch.io",
-    "Camelot",
-    "QuickSwap",
-    "Balancer",
-    "Trader Joe",
-    "Pendle Finance",
-    "Sushi"
+    {
+      "name": "PancakeSwap",
+      "api_type": "Subgraph/REST",
+      "api_endpoint": "https://api.pancakeswap.info/api/v2",
+      "subgraph_endpoint": "https://api.thegraph.com/subgraphs/name/pancakeswap/exchange-v3-bsc",
+      "docs": "https://github.com/pancakeswap/pancake-info-api"
+    },
+    {
+      "name": "Uniswap",
+      "api_type": "GraphQL/REST",
+      "api_endpoint": "https://api.uniswap.org/v1/quote",
+      "subgraph_endpoint": "https://api.thegraph.com/subgraphs/name/uniswap/uniswap-v2",
+      "docs": "https://docs.uniswap.org/api/overview"
+    },
+    {
+      "name": "Raydium AMM",
+      "api_type": "REST",
+      "api_endpoint": "https://api-v3.raydium.io",
+      "docs": "https://docs.raydium.io/raydium/protocol/developers/apis"
+    },
+    {
+      "name": "Fluid",
+      "api_type": "REST",
+      "api_endpoint": "https://api.fluid.trade",
+      "docs": ""
+    },
+    {
+      "name": "Aerodrome",
+      "api_type": "Subgraph",
+      "subgraph_endpoint": "https://api.thegraph.com/subgraphs/name/aerodrome-finance/aerodrome",
+      "docs": ""
+    },
+    {
+      "name": "Meteora",
+      "api_type": "REST",
+      "api_endpoint": "https://app.meteora.ag/api",
+      "docs": "https://docs.meteora.ag"
+    },
+    {
+      "name": "Momentum",
+      "api_type": "REST",
+      "api_endpoint": "https://api.momentum.finance",
+      "docs": ""
+    },
+    {
+      "name": "Pump Swap",
+      "api_type": "REST",
+      "api_endpoint": "https://pump.fun/api",
+      "docs": ""
+    },
+    {
+      "name": "SUN",
+      "api_type": "REST",
+      "api_endpoint": "https://api.sunswap.com",
+      "docs": ""
+    },
+    {
+      "name": "1inch.io",
+      "api_type": "REST",
+      "api_endpoint": "https://api.1inch.dev",
+      "docs": "https://1inch.dev"
+    },
+    {
+      "name": "Camelot",
+      "api_type": "Subgraph",
+      "subgraph_endpoint": "https://api.thegraph.com/subgraphs/name/camelot-labs/camelot-amm-v3",
+      "docs": "https://docs.camelot.exchange"
+    },
+    {
+      "name": "QuickSwap",
+      "api_type": "Subgraph",
+      "subgraph_endpoint": "https://api.thegraph.com/subgraphs/name/quickswap/exchange",
+      "docs": "https://github.com/QuickSwap/QuickSwap-subgraph"
+    },
+    {
+      "name": "Balancer",
+      "api_type": "GraphQL",
+      "api_endpoint": "https://api-v3.balancer.fi",
+      "docs": "https://docs.balancer.fi/data-and-analytics/data-and-analytics/balancer-api"
+    },
+    {
+      "name": "Trader Joe",
+      "api_type": "REST",
+      "api_endpoint": "https://api.traderjoexyz.com",
+      "docs": "https://docs.traderjoexyz.com"
+    },
+    {
+      "name": "Pendle Finance",
+      "api_type": "REST",
+      "api_endpoint": "https://api.pendle.finance",
+      "docs": "https://docs.pendle.finance"
+    },
+    {
+      "name": "Sushi",
+      "api_type": "Subgraph",
+      "subgraph_endpoint": "https://api.thegraph.com/subgraphs/name/sushiswap/exchange",
+      "docs": "https://docs.sushi.com"
+    }
   ]
 }
