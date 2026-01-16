@@ -1,0 +1,20 @@
+{
+  "exchanges": [
+    "PancakeSwap",
+    "Uniswap",
+    "Raydium AMM",
+    "Fluid",
+    "Aerodrome",
+    "Meteora",
+    "Momentum",
+    "Pump Swap",
+    "SUN",
+    "1inch.io",
+    "Camelot",
+    "QuickSwap",
+    "Balancer",
+    "Trader Joe",
+    "Pendle Finance",
+    "Sushi"
+  ]
+}
