@@ -13,11 +13,18 @@
     {
       "name": "Uniswap",
       "api_public": true,
-      "requires_auth": false,
+      "requires_auth": {
+        "subgraph": false,
+        "routing_api": true
+      },
+      "is_paid": {
+        "subgraph": false,
+        "routing_api": "Free tier available, paid plans for higher limits"
+      },
       "rate_limits": {
-        "subgraph": "The Graph free tier: ~1000 requests/hour per IP",
-        "routing_api": "Free tier: 2 requests/second, 50 requests/minute",
-        "notes": "Subgraph API is free. Routing API has free tier with limits, paid plans available."
+        "subgraph": "The Graph free tier: ~1000 requests/hour per IP (may require API key for newer subgraphs)",
+        "routing_api": "Default: 12 requests/second with API key. Free tier available.",
+        "notes": "Subgraph API is free but may require API key for gateway.thegraph.com. Uniswap Labs Routing API requires x-api-key header."
       }
     },
     {
@@ -149,8 +156,18 @@
     }
   ],
   "general_notes": {
-    "the_graph_subgraph": "Most DEX using The Graph Subgraph API have similar limits: ~1000 requests/hour per IP on free tier. Can be throttled if exceeded.",
-    "recommendations": "For production use, consider: 1) Using API keys where available for higher limits, 2) Implementing request throttling, 3) Caching responses, 4) Using WebSocket where available for real-time data",
-    "warning": "Rate limits may change. Always check official documentation before production deployment."
+    "the_graph_subgraph": "The Graph Subgraph API: Older public subgraphs (api.thegraph.com) may work without auth. Newer gateway (gateway.thegraph.com) typically requires API key. Free tier: ~1000 requests/hour per IP. Can be throttled if exceeded.",
+    "authentication": {
+      "public_subgraphs": "Older subgraphs on api.thegraph.com may work without authentication",
+      "gateway_subgraphs": "Newer gateway.thegraph.com typically requires API key (free tier available)",
+      "uniswap_labs_api": "Requires x-api-key header, free tier available with limits"
+    },
+    "pricing": {
+      "most_subgraphs": "Free tier available with rate limits",
+      "uniswap_routing": "Free tier: 12 req/sec default, paid plans available",
+      "1inch": "Free tier: 300 req/min, paid plans for higher limits"
+    },
+    "recommendations": "For production use, consider: 1) Getting API keys for The Graph Gateway if needed, 2) Implementing request throttling, 3) Caching responses, 4) Using WebSocket where available for real-time data, 5) Testing endpoints before production deployment",
+    "warning": "Rate limits and authentication requirements may change. Always check official documentation before production deployment. Some subgraphs may have migrated to gateway.thegraph.com requiring API keys."
   }
 }

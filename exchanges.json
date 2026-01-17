@@ -5,6 +5,9 @@
       "api_type": "Subgraph/REST",
       "api_endpoint": "https://api.pancakeswap.info/api/v2",
       "subgraph_endpoint": "https://api.thegraph.com/subgraphs/name/pancakeswap/exchange-v3-bsc",
+      "requires_auth": false,
+      "is_paid": false,
+      "notes": "Subgraph API is public and free. REST API may be deprecated. The Graph free tier has rate limits.",
       "docs": "https://github.com/pancakeswap/pancake-info-api"
     },
     {
@@ -12,90 +15,144 @@
       "api_type": "GraphQL/REST",
       "api_endpoint": "https://api.uniswap.org/v1/quote",
       "subgraph_endpoint": "https://api.thegraph.com/subgraphs/name/uniswap/uniswap-v2",
+      "requires_auth": {
+        "subgraph": false,
+        "routing_api": true
+      },
+      "is_paid": {
+        "subgraph": false,
+        "routing_api": "Free tier available, paid plans for higher limits"
+      },
+      "notes": "Subgraph API is free and public. Uniswap Labs Routing API requires API key (x-api-key header). Default limit: 12 requests/second.",
       "docs": "https://docs.uniswap.org/api/overview"
     },
     {
       "name": "Raydium AMM",
       "api_type": "REST",
       "api_endpoint": "https://api-v3.raydium.io",
+      "requires_auth": false,
+      "is_paid": false,
+      "notes": "Public REST API. Check official docs for exact endpoints and rate limits.",
       "docs": "https://docs.raydium.io/raydium/protocol/developers/apis"
     },
     {
       "name": "Fluid",
       "api_type": "REST",
       "api_endpoint": "https://api.fluid.trade",
+      "requires_auth": "unknown",
+      "is_paid": "unknown",
+      "notes": "API structure not fully documented. May require verification.",
       "docs": ""
     },
     {
       "name": "Aerodrome",
       "api_type": "Subgraph",
       "subgraph_endpoint": "https://api.thegraph.com/subgraphs/name/aerodrome-finance/aerodrome",
+      "requires_auth": false,
+      "is_paid": false,
+      "notes": "Uses The Graph Subgraph API (free tier available). May require API key for newer versions.",
       "docs": ""
     },
     {
       "name": "Meteora",
       "api_type": "REST",
       "api_endpoint": "https://app.meteora.ag/api",
+      "requires_auth": "unknown",
+      "is_paid": "unknown",
+      "notes": "Check official documentation for API structure and authentication requirements.",
       "docs": "https://docs.meteora.ag"
     },
     {
       "name": "Momentum",
       "api_type": "REST",
       "api_endpoint": "https://api.momentum.finance",
+      "requires_auth": "unknown",
+      "is_paid": "unknown",
+      "notes": "API structure not fully documented. May require verification.",
       "docs": ""
     },
     {
       "name": "Pump Swap",
       "api_type": "REST",
       "api_endpoint": "https://pump.fun/api",
+      "requires_auth": "unknown",
+      "is_paid": "unknown",
+      "notes": "API structure not fully documented. May require verification.",
       "docs": ""
     },
     {
       "name": "SUN",
       "api_type": "REST",
       "api_endpoint": "https://api.sunswap.com",
+      "requires_auth": "unknown",
+      "is_paid": "unknown",
+      "notes": "API structure not fully documented. May require verification.",
       "docs": ""
     },
     {
       "name": "1inch.io",
       "api_type": "REST",
       "api_endpoint": "https://api.1inch.dev",
+      "requires_auth": false,
+      "is_paid": {
+        "free_tier": true,
+        "paid_tiers": true
+      },
+      "notes": "Free tier: 300 requests/minute per IP without API key. Paid plans available for higher limits.",
       "docs": "https://1inch.dev"
     },
     {
       "name": "Camelot",
       "api_type": "Subgraph",
       "subgraph_endpoint": "https://api.thegraph.com/subgraphs/name/camelot-labs/camelot-amm-v3",
+      "requires_auth": false,
+      "is_paid": false,
+      "notes": "Uses The Graph Subgraph API (free tier available). May require API key for newer versions.",
       "docs": "https://docs.camelot.exchange"
     },
     {
       "name": "QuickSwap",
       "api_type": "Subgraph",
       "subgraph_endpoint": "https://api.thegraph.com/subgraphs/name/quickswap/exchange",
+      "requires_auth": false,
+      "is_paid": false,
+      "notes": "Uses The Graph Subgraph API (free tier available). May require API key for newer versions.",
       "docs": "https://github.com/QuickSwap/QuickSwap-subgraph"
     },
     {
       "name": "Balancer",
       "api_type": "GraphQL",
       "api_endpoint": "https://api-v3.balancer.fi",
+      "requires_auth": false,
+      "is_paid": false,
+      "notes": "Public GraphQL API available. Check official docs for latest rate limits.",
       "docs": "https://docs.balancer.fi/data-and-analytics/data-and-analytics/balancer-api"
     },
     {
       "name": "Trader Joe",
       "api_type": "REST",
       "api_endpoint": "https://api.traderjoexyz.com",
+      "requires_auth": "unknown",
+      "is_paid": "unknown",
+      "notes": "Check official documentation for API structure and authentication requirements.",
       "docs": "https://docs.traderjoexyz.com"
     },
     {
       "name": "Pendle Finance",
       "api_type": "REST",
       "api_endpoint": "https://api.pendle.finance",
+      "requires_auth": "unknown",
+      "is_paid": "unknown",
+      "notes": "API structure not fully documented. May require verification.",
       "docs": "https://docs.pendle.finance"
     },
     {
       "name": "Sushi",
       "api_type": "Subgraph",
       "subgraph_endpoint": "https://api.thegraph.com/subgraphs/name/sushiswap/exchange",
+      "requires_auth": false,
+      "is_paid": false,
+      "notes": "Uses The Graph Subgraph API (free tier available). May require API key for newer versions.",
       "docs": "https://docs.sushi.com"
     }
   ]
